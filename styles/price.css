@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: #111111;
+}
+
+header img {
+    position: absolute;
+    top: 30px;
+    right: 450px;
+}
+.nav img{
+    position: absolute;
+    left: 405px;
+    top: 40px;
+}
+.nav ul{
+    display: flex;
+    list-style: none;
+    margin-left: 605px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+.nav a:hover {
+    color: #CDAA7D;
+}
+.nav li{
+    margin-right: 40px;
+    font-size: 18px;
+}
+input {
+    display: none;
+}
+header hr {
+    width: 1260px;
+    margin-right:auto ;
+    margin-left: auto;
+}
+h2 {
+    font-size: 48px;
+    margin-top: 40px;
+    color: white;
+    text-align: center;
+}
+
+.price1 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+.price1__pic img {
+    width: 95%;
+}
+.price1__text {
+    color: white;
+}
+.price1__text h5 {
+    font-size: 27px;
+}
+.price1__text p {
+    font-size: 18px;
+}
+.price1__text span {
+    font-size: 27px;
+    padding-left: 450px;
+}
+.price1 hr {
+    width: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.price2 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+.price2__pic img {
+    width: 95%;
+    padding-left: 30px;
+}
+.price2__text {
+    color: white;
+}
+.price2__text h5 {
+    font-size: 27px;
+}
+.price2__text p {
+    font-size: 18px;
+}
+.price2__text span {
+    font-size: 27px;
+    padding-left: 450px;
+}
+.price2 hr {
+    width: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    height: 100px;
+    background-color: #111111;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+    padding-top: 100px;
+    
+}
+.footer__flex {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.footer hr {
+    width: 1260px;
+    margin-right:auto ;
+    margin-left: auto;
+}
+.footer p{
+    color: white;
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+.footer h4 {
+    color: white;
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+.footer h5 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    font-size: 18px;
+}

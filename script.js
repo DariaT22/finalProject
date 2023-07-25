@@ -1,10 +1,11 @@
-alert ('js runs');
 
 const slider = document.querySelector('.slider'); 
 const slide = document.querySelectorAll('.slide'); 
 const prevBtn = document.querySelector('.prev'); 
 const nextBtn = document.querySelector('.next'); 
 let currentSlide = 0; 
+let resultApi = new Array();
+
  
 
 for (let i = 1; i < slide.length; i++) { 
@@ -40,6 +41,7 @@ const closeBtn = document.getElementById('closeBtn');
 const popupForm = document.getElementById('popupForm');
 const nameInput = document.getElementById('name');
 const phoneInput = document.getElementById('phone');
+const sendButton = document.getElementById('submit');
 
 // Функция для установки cookies
 function setCookie(name, value, days) {
@@ -73,6 +75,7 @@ function getCookie(name) {
 // });
 
 // Закрытие popup при клике на крестик
+
 closeBtn.addEventListener('click', () => {
   popup.style.display = 'none';
 });
@@ -86,17 +89,45 @@ window.addEventListener('click', (event) => {
 
 // Обработчик отправки формы
 popupForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const name = nameInput.value;
-  const phone = phoneInput.value;
-  
-  // Сохраняем данные в cookies на 7 дней
-  setCookie('name', name, 7);
-  setCookie('phone', phone, 7);
-  
-  // Дополнительные действия при отправке формы
-  // Например, отправка данных на сервер или обновление страницы
+    event.preventDefault();
+    const name = nameInput.value;
+    const phone = phoneInput.value;
+    if(name != null && phone != null){
+    // Сохраняем данные в cookies на 7 дней
+    setCookie('name', name, 7);
+    setCookie('phone', phone, 7);
+    popup.style.display = 'none';
+  }
+  else{
+    alert("Заполните форму!");
+  }
 });
 
-console.log(name);
+//RESTAPI
+window.onload = function() {
+  getApi();
+ setTimeout(setText, 3000);
+};
+  
+function getApi(){
+  for (let i = 1; i < 10; i++) {
+    var url = 'https://jsonplaceholder.typicode.com/todos/' + i;
+    fetch(url)
+      .then(response => response.json())
+      .then(json => resultApi.push(json)
+      )
+ }
+};
+
+function setText(){
+  resultApi.forEach(elem => {
+    var id_comments = 'comments_' + elem.id;
+    var parent = document.getElementById(id_comments);
+    if( parent != null){
+      let p = document.createElement('p');
+      p.textContent = elem.title;
+      parent.appendChild(p);
+    }
+ 
+});
+}

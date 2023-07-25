@@ -62,17 +62,6 @@ function getCookie(name) {
   return null;
 }
 
-// // Открытие popup при загрузке страницы, если cookies уже содержат данные
-// window.addEventListener('load', () => {
-//   const storedName = getCookie('name');
-//   const storedPhone = getCookie('phone');
-  
-//   if (storedName && storedPhone) {
-//     nameInput.value = storedName;
-//     phoneInput.value = storedPhone;
-//     popup.style.display = 'block';
-//   }
-// });
 
 // Закрытие popup при клике на крестик
 

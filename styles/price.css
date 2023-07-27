@@ -1,4 +1,4 @@
-@import "media.css";
+/* @import "media.css"; */
 
 
 *{
@@ -36,7 +36,8 @@ header img {
     font-size: 18px;
 }
 input {
-    display: none;
+    display: block;
+    opacity: 0;
 }
 header hr {
     width: 1260px;

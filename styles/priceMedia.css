@@ -10,7 +10,10 @@
         right: 682px;
     }
     .price1 {
-        width: 100%;
+        width: 80%;
+    }
+    .price2 {
+        width: 80%;
     }
    
 
@@ -332,7 +335,7 @@
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 452px) {
     .main__block1 h1 {
         font-size: 35px;
         margin-top: -50px;
@@ -345,6 +348,20 @@
         left: 22px;
     }
     
+    .price1 {
+        display: block;
+    }
+    .price2 {
+        display: block;
+    }
+    .price2 img {
+        position: absolute;
+        top: 1048px;
+        padding-left: 2px;
+    }
+    .price2__text {
+        padding-top: 360px;
+    }
 
 
 
@@ -378,12 +395,41 @@
 
 @media (max-width: 320px) {
     header img {
-        right: 160px;
+        right: 110px;
+        
+    }
+    .burger_menu, input {
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: 30px;
+        right: -40px;
     }
     .nav img {
         left: 0px;
     }
-    
+    h2 {
+        padding-left: 70px;
+        margin-top: 100px;
+    }
+
+    .price1 {
+        padding-left: 40px; 
+    }
+    .price1 img {
+        padding-bottom: 10px;
+    }
+    .price2 img {
+        position: absolute;
+        top: 1138px;
+        padding-left: 43px;
+    }
+    .price2__text {
+        padding-top: 300px;
+        padding-left: 30px;
+    } 
+
+
     .next {
         top: 250px;
      }
